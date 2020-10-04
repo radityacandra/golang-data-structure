@@ -1,10 +1,5 @@
 package datastructure
 
-type Node struct {
-	next *Node
-	data interface{}
-}
-
 func NewLinkedList() *Node {
 	return &Node{}
 }
@@ -12,6 +7,7 @@ func NewLinkedList() *Node {
 func (node *Node) AddFirst(value interface{}) {
 	if node.data == nil {
 		node.data = value
+		return
 	}
 
 	newNode := Node{
